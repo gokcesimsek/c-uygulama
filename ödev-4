@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    double number;
+
+    printf("Bir ondalik sayi girin: ");
+    scanf("%lf", &number);
+
+    printf("Ondalik sayi: %f\n", number);
+    printf("Onaltilik sayi: %a\n", number);
+
+    return 0;
+}
