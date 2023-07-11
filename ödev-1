@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_LENGTH 100
+
+int main() {
+    char sentence[MAX_LENGTH];
+
+    printf("Bir kelime veya cumle girin: ");
+    fgets(sentence, MAX_LENGTH, stdin);
+
+    // fgets, satır sonu karakterini de alır, bu yüzden \n karakterini kaldıralım
+    sentence[strcspn(sentence, "\n")] = '\0';
+
+    int length = strlen(sentence);
+    printf("Girilen kelimenin veya cumlenin uzunlugu: %d\n", length);
+
+    return 0;
+}
